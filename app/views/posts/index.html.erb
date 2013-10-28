@@ -1,0 +1,12 @@
+<div class="container">
+
+  <%@posts.each_with_index do |post, index|%>
+  <p><%= "#{index+1} " %><a href="http://<%=post.url%>"><%=post.title%></a><br>
+  By: <%= link_to("TEXT FOR LINKS", user_path(post.user_id)) %>
+
+  <%=User.find_by_id(post.user_id).user_name%></a><br>
+  <a href="/post/<%=post.id%>"><%= post.comments.count %> Comments</a>
+  </p>
+
+    <%end%>
+</div>
