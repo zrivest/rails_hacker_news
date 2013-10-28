@@ -5,6 +5,7 @@ RailsHackerNews::Application.routes.draw do
 
   get '/account' => 'users#account'
   post '/login' => 'sessions#login'
+  post '/logout' => 'sessions#logout'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
