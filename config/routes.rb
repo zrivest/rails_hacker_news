@@ -3,6 +3,9 @@ RailsHackerNews::Application.routes.draw do
   resources :posts
   root to: 'posts#index'
 
+  get '/account' => 'users#account'
+  post '/login' => 'sessions#login'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
