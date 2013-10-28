@@ -1,7 +1,7 @@
 RailsHackerNews::Application.routes.draw do
 
-
-  root to: 'welcome#index'
+  resources :posts
+  root to: 'post#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
